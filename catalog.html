@@ -3,223 +3,717 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>پولاد صنعت | کاتالوگ مبلمان فضای باز</title>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
-<style>*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--g9:#1B4332;--g8:#2D6A4F;--g7:#40916C;--g6:#52B788;--g5:#74C69D;--g4:#95D5B2;--g3:#B7E4C7;--g2:#D8F3DC;--g1:#EAF5EE;--g05:#F4FAF6;--paper:#FDFFFE;--td:#1A2E1F;--tm:#3D5A45;--tl:#6B8F75}
-body{font-family:'Vazirmatn',sans-serif;background:#E8ECE9;background-image:radial-gradient(ellipse at 20% 50%,rgba(116,198,157,.12) 0%,transparent 50%),radial-gradient(ellipse at 80% 50%,rgba(116,198,157,.08) 0%,transparent 50%);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;direction:rtl}
-.bw{position:relative;perspective:2500px}
-.page{width:100%;height:100%;background:var(--paper);position:relative;overflow:hidden;user-select:none}
-.page::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 0% 0%,rgba(116,198,157,.06) 0%,transparent 40%),radial-gradient(ellipse at 100% 100%,rgba(116,198,157,.04) 0%,transparent 40%),radial-gradient(ellipse at 100% 0%,rgba(116,198,157,.03) 0%,transparent 30%);pointer-events:none;z-index:1}
-.sp{position:absolute;top:-4px;left:20px;right:20px;height:28px;display:flex;justify-content:space-evenly;align-items:center;z-index:10;pointer-events:none}
-.sh{width:14px;height:14px;border-radius:50%;border:2px solid var(--g3);background:var(--paper);box-shadow:inset 0 1px 3px rgba(0,0,0,.06)}
-.pc{position:relative;z-index:2;width:100%;height:100%;padding:50px 36px 28px;display:flex;flex-direction:column}
-.dots{position:absolute;inset:0;pointer-events:none;z-index:0;opacity:.04;background-image:radial-gradient(circle,var(--g9) .8px,transparent .8px);background-size:20px 20px}
-.grid{position:absolute;inset:0;pointer-events:none;z-index:0;opacity:.025;background-image:repeating-linear-gradient(0deg,var(--g9) 0px,var(--g9) 1px,transparent 1px,transparent 32px)}
-.edge{position:absolute;top:0;bottom:0;width:3px;z-index:3}
-.edge.r{right:0;background:linear-gradient(to left,rgba(0,0,0,.06),transparent)}
-.edge.l{left:0;background:linear-gradient(to right,rgba(0,0,0,.06),transparent)}
-.pl2{position:absolute;top:18px;right:24px;height:24px;width:auto;z-index:5;opacity:.7}
-.pl2.l{right:auto;left:24px}
-.cover .pc{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 50px}
-.cl{width:220px;height:auto;margin-bottom:36px;filter:drop-shadow(0 2px 8px rgba(27,67,50,.15))}
-.cln{width:100px;height:2px;background:linear-gradient(90deg,transparent,var(--g5),transparent);margin:20px 0;border-radius:1px}
-.ct2{font-size:38px;font-weight:900;color:var(--g8);text-align:center;line-height:1.5}
-.csb{font-size:15px;font-weight:300;color:var(--tl);text-align:center;margin-top:14px;line-height:1.8}
-.cyr{display:inline-block;margin-top:28px;padding:8px 28px;border:1.5px solid var(--g3);border-radius:24px;font-size:13px;font-weight:500;color:var(--g7);letter-spacing:1px}
-.cn{position:absolute;width:40px;height:40px;z-index:5}.cn svg{width:100%;height:100%}
-.cn.tl{top:16px;right:16px}.cn.tr{top:16px;left:16px;transform:scaleX(-1)}.cn.bl{bottom:16px;right:16px;transform:scaleY(-1)}.cn.br{bottom:16px;left:16px;transform:scale(-1,-1)}
-.pl .pc{padding:52px 32px 20px}
-.iw{width:100%;flex:1;border-radius:12px;overflow:hidden;position:relative;box-shadow:0 8px 40px rgba(27,67,50,.15);background:var(--g05);min-height:0}
-.iw img{width:100%;height:100%;object-fit:cover;display:block}
-.il{position:absolute;bottom:0;left:0;right:0;padding:24px 16px 16px;background:linear-gradient(transparent,rgba(27,67,50,.88));color:#fff;font-size:12.5px;font-weight:400;line-height:2;text-align:justify}
-.in{font-size:19px;font-weight:800;margin-bottom:6px;display:flex;align-items:center;gap:10px}
-.it{font-size:10px;font-weight:600;padding:2px 10px;background:var(--g6);border-radius:10px;color:#fff}
-.pr .pc{padding:52px 32px 20px}
-.sl{font-size:10px;font-weight:700;color:var(--g6);letter-spacing:2px;margin-bottom:6px}
-.pt2{font-size:24px;font-weight:900;color:var(--g9);line-height:1.4;margin-bottom:16px}
-.st2{width:100%;border-collapse:separate;border-spacing:0;background:var(--g05);border-radius:10px;overflow:hidden;margin-bottom:16px;border:1px solid var(--g2)}
-.st2 tr{transition:background .2s}.st2 tr:hover{background:var(--g1)}
-.st2 td{padding:8px 12px;font-size:12px;border-bottom:1px solid var(--g2)}.st2 tr:last-child td{border-bottom:none}
-.st2 .sll{color:var(--tl);font-weight:400;width:45%}.st2 .svl{color:var(--g9);font-weight:700;text-align:left;direction:ltr}
-.ft{margin-bottom:16px}.ft .sl{margin-bottom:8px}
-.bg2{display:grid;grid-template-columns:1fr 1fr;gap:7px}
-.fb{display:flex;align-items:center;gap:7px;padding:7px 10px;background:#fff;border:1px solid var(--g2);border-radius:8px;font-size:11px;font-weight:500;color:var(--tm)}
-.bi{width:22px;height:22px;background:var(--g1);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.bi svg{width:12px;height:12px;stroke:var(--g7);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.cs2{flex:1;display:flex;flex-direction:column}.cs2 .sl{margin-bottom:10px}
-.sg2{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;flex:1}
-.sc2{border-radius:8px;overflow:hidden;border:2px solid var(--g2);background:#fff;display:flex;flex-direction:column;transition:border-color .3s,transform .2s}
-.sc2:hover{border-color:var(--g6);transform:translateY(-2px)}
-.sc2 img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
-.sc2 .sn2{padding:5px 2px;text-align:center;font-size:10px;font-weight:600;color:var(--tm);background:var(--g05)}
-.ab .pc{padding:52px 32px 20px}
-.abt{font-size:22px;font-weight:900;color:var(--g9);margin-bottom:6px}
-.abd{width:50px;height:3px;background:var(--g6);border-radius:2px;margin-bottom:18px}
-.abv{width:100%;height:100px;border-radius:10px;background:linear-gradient(135deg,var(--g1),var(--g2),var(--g1));display:flex;align-items:center;justify-content:center;margin-bottom:18px;position:relative;overflow:hidden}
-.abv::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(45,106,79,.1) 1px,transparent 1px);background-size:16px 16px}
-.abs2{text-align:center;z-index:1}
-.abs2 .n2{font-size:34px;font-weight:900;color:var(--g8);line-height:1}
-.abs2 .l2{font-size:11px;color:var(--tl);margin-top:3px}
-.abp{font-size:12.5px;line-height:2.4;color:var(--tm);text-align:justify;margin-bottom:18px}
-.abf{display:flex;flex-direction:column;gap:9px;flex:1}
-.abfi{display:flex;align-items:center;gap:10px;padding:9px 12px;background:var(--g05);border-radius:8px;border:1px solid var(--g2)}
-.abfi .ai2{width:30px;height:30px;background:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 1px 4px rgba(0,0,0,.05)}
-.abfi .ai2 svg{width:15px;height:15px;stroke:var(--g7);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.abfi .at2{font-size:11.5px;color:var(--tm);line-height:1.6}
-.abfi .at2 strong{color:var(--g9)}
-.ct3 .pc{padding:52px 32px 20px}
-.ctt{font-size:22px;font-weight:900;color:var(--g9);margin-bottom:6px}
-.ctd{width:50px;height:3px;background:var(--g6);border-radius:2px;margin-bottom:18px}
-.ctc{background:var(--g05);border:1px solid var(--g2);border-radius:10px;padding:14px;margin-bottom:12px}
-.ctct{font-size:13px;font-weight:700;color:var(--g8);margin-bottom:10px;display:flex;align-items:center;gap:7px}
-.ctct svg{width:15px;height:15px;stroke:var(--g7);fill:none;stroke-width:2}
-.cti{display:flex;align-items:flex-start;gap:9px;margin-bottom:7px;font-size:11px;line-height:1.9;color:var(--tm)}
-.cti svg{width:13px;height:13px;stroke:var(--g6);fill:none;stroke-width:2;flex-shrink:0;margin-top:3px}
-.ctb{display:block;text-align:center;padding:11px 20px;background:var(--g8);color:#fff;border-radius:10px;text-decoration:none;font-size:13px;font-weight:600;margin-top:auto;transition:background .3s}
-.ctb:hover{background:var(--g7)}
-.bc2 .pc{display:flex;flex-direction:column;align-items:center;justify-content:center}
-.bcl{width:150px;height:auto;margin-bottom:20px;opacity:.8}
-.bctx{font-size:12px;color:var(--tl);font-weight:300;text-align:center;line-height:2}
-.bcln{width:50px;height:2px;background:var(--g4);margin:16px 0;border-radius:1px}
-.ctrls{display:flex;align-items:center;gap:16px;margin-top:24px}
-.btn2{width:48px;height:48px;border-radius:50%;border:2px solid var(--g4);background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .3s;box-shadow:0 2px 20px rgba(27,67,50,.08)}
-.btn2:hover{background:var(--g8);border-color:var(--g8)}.btn2:hover svg{stroke:#fff}
-.btn2:disabled{opacity:.3;cursor:not-allowed}.btn2:disabled:hover{background:#fff;border-color:var(--g4)}.btn2:disabled:hover svg{stroke:var(--g7)}
-.btn2 svg{width:20px;height:20px;stroke:var(--g7);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
-.pi2{font-size:13px;color:var(--tl);font-weight:500;min-width:60px;text-align:center}
-@media(max-width:768px){body{padding:10px}.ctrls{margin-top:16px}.btn2{width:40px;height:40px}}
+<title>کاتالوگ پولاد صنعت - مبلمان فضای باز</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* ====== BASE RESET ====== */
+@page {
+    size: 794px 1123px; /* A4 */
+    margin: 0;
+}
+:root {
+    --c-bg: #FAFAF8;
+    --c-white: #FFFFFF;
+    --c-green-dark: #4A7C59;
+    --c-green-mid: #7BA68A;
+    --c-green-light: #B8D4C1;
+    --c-green-pale: #DCE9DF;
+    --c-green-wash: rgba(123, 166, 138, 0.08);
+    --c-text: #2D3B2E;
+    --c-text-light: #5A6B5C;
+    --c-border: #C8D9CC;
+    --c-shadow: rgba(74, 124, 89, 0.12);
+    --font-main: 'Vazirmatn', 'DejaVu Sans', sans-serif;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 794px;
+    background: var(--c-bg);
+    color: var(--c-text);
+    font-family: var(--font-main), sans-serif;
+    direction: rtl;
+}
+@media screen {
+    html {
+        height: auto;
+        display: flex;
+        justify-content: center;
+        background: #e0e0d8;
+    }
+    body {
+        transform-origin: top center;
+        margin: 20px auto;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    }
+}
+img { display: block; max-width: 100%; }
+
+/* ====== SKETCHBOOK TEXTURE ====== */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+    z-index: 0;
+    background:
+        radial-gradient(ellipse at 0% 0%, rgba(123, 166, 138, 0.06) 0%, transparent 40%),
+        radial-gradient(ellipse at 100% 0%, rgba(123, 166, 138, 0.05) 0%, transparent 40%),
+        radial-gradient(ellipse at 0% 100%, rgba(123, 166, 138, 0.07) 0%, transparent 40%),
+        radial-gradient(ellipse at 100% 100%, rgba(123, 166, 138, 0.05) 0%, transparent 40%);
+}
+
+/* ====== PAGE CONTAINER ====== */
+.page {
+    position: relative;
+    width: 794px;
+    min-height: 1123px;
+    z-index: 1;
+}
+
+/* ====== LOGO BAR (all pages) ====== */
+.logo-bar {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    z-index: 10;
+}
+.logo-bar img {
+    height: 32px;
+    width: auto;
+}
+
+/* ====== PAGE NUMBER ====== */
+.page-num {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    color: var(--c-green-mid);
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* ====== COVER PAGE ====== */
+.cover {
+    width: 794px;
+    height: 1123px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: var(--c-white);
+    break-after: page;
+    padding: 60px 50px;
+}
+
+.cover-logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+.cover-line {
+    width: 80px;
+    height: 0;
+    border-bottom: 2px solid var(--c-green-mid);
+    margin: 44px auto;
+}
+
+.cover-title {
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--c-green-dark);
+    text-align: center;
+    line-height: 1.4;
+    margin: 0;
+    margin-top: 50px;
+}
+
+.cover-subtitle {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--c-text-light);
+    text-align: center;
+    margin-top: 24px;
+    line-height: 1.6;
+}
+
+.cover-tag {
+    display: inline-block;
+    padding: 6px 20px;
+    border: 1px solid var(--c-green-light);
+    border-radius: 20px;
+    font-size: 13px;
+    color: var(--c-green-dark);
+    font-weight: 500;
+    margin-top: 50px;
+    letter-spacing: 0.5px;
+}
+
+/* Decorative corner lines on cover */
+.corner-deco {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-color: var(--c-green-pale);
+    border-style: solid;
+}
+.corner-deco.tl { top: 30px; right: 30px; border-width: 2px 2px 0 0; }
+.corner-deco.tr { top: 30px; left: 30px; border-width: 2px 0 0 2px; }
+.corner-deco.bl { bottom: 30px; right: 30px; border-width: 0 2px 2px 0; }
+.corner-deco.br { bottom: 30px; left: 30px; border-width: 0 0 2px 2px; }
+
+/* ====== PRODUCT PAGE ====== */
+.product-page {
+    width: 794px;
+    min-height: 1123px;
+    background: var(--c-white);
+    position: relative;
+    padding: 70px 50px 50px 50px;
+    break-inside: avoid;
+}
+
+.product-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.product-tag {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--c-green-dark);
+    background: var(--c-green-pale);
+    padding: 4px 14px;
+    border-radius: 12px;
+    letter-spacing: 0.5px;
+}
+
+.product-name {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--c-green-dark);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.green-line {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, var(--c-green-mid), var(--c-green-pale), transparent);
+    margin-bottom: 24px;
+}
+
+/* Product layout: image + text side by side */
+.product-layout {
+    display: flex;
+    gap: 28px;
+    margin-bottom: 24px;
+}
+
+.product-image-main {
+    flex: 0 0 48%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px var(--c-shadow);
+    background: var(--c-green-wash);
+    position: relative;
+}
+.product-image-main img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.product-desc {
+    font-size: 13.5px;
+    line-height: 2;
+    color: var(--c-text);
+    text-align: justify;
+    font-weight: 400;
+}
+
+/* Specs table */
+.specs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 16px;
+    background: var(--c-green-wash);
+    border-radius: 8px;
+    padding: 16px 18px;
+    border: 1px solid var(--c-green-pale);
+}
+
+.spec-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12.5px;
+    padding: 4px 0;
+}
+.spec-item .label {
+    color: var(--c-text-light);
+    font-weight: 400;
+}
+.spec-item .value {
+    color: var(--c-green-dark);
+    font-weight: 600;
+}
+
+.spec-full {
+    grid-column: 1 / -1;
+    border-top: 1px solid var(--c-border);
+    padding-top: 8px;
+    margin-top: 4px;
+}
+
+/* Feature badges */
+.features-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 4px;
+}
+.feature-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 12px;
+    background: var(--c-white);
+    border: 1px solid var(--c-green-light);
+    border-radius: 16px;
+    font-size: 11.5px;
+    color: var(--c-green-dark);
+    font-weight: 500;
+}
+.feature-badge .dot {
+    width: 6px;
+    height: 6px;
+    background: var(--c-green-mid);
+    border-radius: 50%;
+}
+
+/* Color swatches section */
+.colors-section {
+    margin-top: 8px;
+}
+.colors-label {
+    font-size: 12px;
+    color: var(--c-text-light);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.colors-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+.color-swatch {
+    width: 72px;
+    height: 72px;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 2px solid var(--c-green-pale);
+    position: relative;
+    transition: border-color 0.2s;
+}
+.color-swatch img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.color-swatch .color-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(45, 59, 46, 0.7);
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    padding: 3px 0;
+    font-weight: 400;
+}
+
+/* ====== CONTACT PAGE ====== */
+.contact-page {
+    width: 794px;
+    min-height: 1123px;
+    background: var(--c-white);
+    position: relative;
+    padding: 70px 50px 50px 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-title {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--c-green-dark);
+    margin-bottom: 8px;
+}
+
+.contact-divider {
+    width: 50px;
+    height: 2px;
+    background: var(--c-green-mid);
+    margin-bottom: 28px;
+    border-radius: 1px;
+}
+
+.about-text {
+    font-size: 13.5px;
+    line-height: 2.2;
+    color: var(--c-text);
+    text-align: justify;
+    margin-bottom: 32px;
+    font-weight: 400;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    flex: 1;
+}
+
+.contact-card {
+    background: var(--c-green-wash);
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid var(--c-green-pale);
+}
+
+.contact-card-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--c-green-dark);
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--c-border);
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 1.8;
+    color: var(--c-text);
+}
+
+.contact-item .icon {
+    width: 18px;
+    height: 18px;
+    background: var(--c-green-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.contact-item .icon svg {
+    width: 10px;
+    height: 10px;
+    fill: var(--c-green-dark);
+}
+
+.contact-footer {
+    text-align: center;
+    margin-top: auto;
+    padding-top: 24px;
+    border-top: 1px solid var(--c-green-pale);
+}
+.contact-footer p {
+    font-size: 11px;
+    color: var(--c-text-light);
+    margin: 4px 0;
+    font-weight: 300;
+}
+
+.website-link {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 8px 24px;
+    background: var(--c-green-dark);
+    color: white;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/* ====== SKETCHBOOK GRID LINES (decorative) ====== */
+.grid-lines {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.03;
+    background-image:
+        repeating-linear-gradient(0deg, var(--c-green-dark) 0px, var(--c-green-dark) 1px, transparent 1px, transparent 40px);
+}
+
+/* Spiral binding decoration on right side */
+.spiral-deco {
+    position: absolute;
+    top: 40px;
+    right: 16px;
+    bottom: 40px;
+    width: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 2;
+}
+.spiral-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1.5px solid var(--c-green-light);
+    background: var(--c-white);
+}
+
 </style>
 </head>
 <body>
-<div class="bw"><div id="book">
 
-<div class="page cover" data-density="hard">
-    <div class="sp"><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div></div><div class="cn tl"><svg viewBox="0 0 40 40"><path d="M2 38 L2 8 Q2 2 8 2 L38 2" fill="none" stroke="#95D5B2" stroke-width="1.5"/></svg></div><div class="cn tr"><svg viewBox="0 0 40 40"><path d="M2 38 L2 8 Q2 2 8 2 L38 2" fill="none" stroke="#95D5B2" stroke-width="1.5"/></svg></div><div class="cn bl"><svg viewBox="0 0 40 40"><path d="M2 38 L2 8 Q2 2 8 2 L38 2" fill="none" stroke="#95D5B2" stroke-width="1.5"/></svg></div><div class="cn br"><svg viewBox="0 0 40 40"><path d="M2 38 L2 8 Q2 2 8 2 L38 2" fill="none" stroke="#95D5B2" stroke-width="1.5"/></svg></div><div class="dots"></div>
-    <div class="pc">
-        <img src="images/logo.png" class="cl" alt="poolad">
-        <div class="cln"></div>
-        <h1 class="ct2">مبلمان فضای باز</h1>
-        <p class="csb">طراحی مدرن  |  کیفیت بی‌نظیر  |  ماندگاری در فضای باز</p>
-        <div class="cln"></div>
-        <span class="cyr">کاتالوگ محصولات ۱۴۰۴</span>
-    </div>
+<!-- ==================== COVER PAGE ==================== -->
+<div class="cover">
+    <img src="images/logo.png" class="cover-logo" alt="پولاد صنعت">
+
+    <div class="cover-line"></div>
+
+    <h1 class="cover-title">مبلمان فضای باز</h1>
+
+    <p class="cover-subtitle">
+        طراحی مدرن، کیفیت بی‌نظیر، ماندگاری در فضای باز
+    </p>
+
+    <div class="cover-line"></div>
+
+    <span class="cover-tag">کاتالوگ محصولات ۱۴۰۴</span>
 </div>
 
-<div class="page pl">
-    <img src="images/logo.png" class="pl2" alt="poolad"><div class="sp"><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div></div><div class="grid"></div><div class="edge r"></div>
-    <div class="pc"><div class="iw">
-        <img src="images/solara_main.jpg" alt="solara">
-        <div class="il"><div class="in"><span>سولارا</span><span class="it">صندلی</span></div>
-        صندلی دسته‌دار پلیمری یک تکه سولارا گزینه‌ای عالی برای محیط‌های کاری و خانگی است. این صندلی با استفاده از پلی پروپیلن تقویت شده طراحی شده و سطح براق و جذابی دارد. طراحی ارگونومیک آن باعث می‌شود نشستن روی آن بسیار راحت باشد.
+<!-- ==================== PRODUCT 1: SOLARA CHAIR ==================== -->
+<div class="product-page">
+    <div class="grid-lines"></div>
+    <div class="logo-bar"><img src="images/logo.png" alt="پولاد صنعت"></div>
+    <div class="spiral-deco">
+        <div class="spiral-dot"></div><div class="spiral-dot"></div><div class="spiral-dot"></div>
+        <div class="spiral-dot"></div><div class="spiral-dot"></div><div class="spiral-dot"></div>
+        <div class="spiral-dot"></div><div class="spiral-dot"></div><div class="spiral-dot"></div>
+        <div class="spiral-dot"></div><div class="spiral-dot"></div><div class="spiral-dot"></div>
+        <div class="spiral-dot"></div><div class="spiral-dot"></div><div class="spiral-dot"></div>
+    </div>
+
+    <div class="product-header">
+        <span class="product-tag">صندلی</span>
+        <h2 class="product-name">سولارا</h2>
+    </div>
+    <div class="green-line"></div>
+
+    <div class="product-layout">
+        <div class="product-image-main">
+            <img src="images/solara_main.jpg" alt="صندلی سولارا">
         </div>
-    </div></div>
-</div>
+        <div class="product-info">
+            <p class="product-desc">
+                صندلی دسته‌دار پلیمری یک تکه سولارا گزینه‌ای عالی برای محیط‌های کاری و خانگی است. این صندلی با استفاده از پلی پروپیلن تقویت شده طراحی شده و سطح براق و جذابی دارد. طراحی ارگونومیک آن باعث می‌شود نشستن روی آن بسیار راحت باشد. این صندلی در چهار رنگ متنوع عرضه می‌شود و می‌تواند به زیبایی فضای شما را ارتقا بخشد.
+            </p>
 
-<div class="page pr">
-    <img src="images/logo.png" class="pl2 l" alt="poolad"><div class="sp"><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div></div><div class="grid"></div><div class="edge l"></div>
-    <div class="pc">
-        <div class="sl">مشخصات فنی</div>
-        <h2 class="pt2">سولارا</h2>
-        <table class="st2"><tr><td class="sll">طول</td><td class="svl">۵۷.۵ cm</td></tr><tr><td class="sll">عرض</td><td class="svl">۵۵.۳ cm</td></tr><tr><td class="sll">ارتفاع</td><td class="svl">۱۰۱ cm</td></tr><tr><td class="sll">ارتفاع پشتی</td><td class="svl">۸۰ cm</td></tr><tr><td class="sll">وزن</td><td class="svl">۲.۴ kg</td></tr><tr><td class="sll">تعداد در بسته</td><td class="svl">۶ عدد</td></tr></table>
-        <div class="ft"><div class="sl">ویژگی‌ها</div><div class="bg2"><div class="fb"><span class="bi"><svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></span>مقاوم UV</div><div class="fb"><span class="bi"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.27 6.96 12 12.01l8.73-5.05M12 22.08V12"/></svg></span>قابل انباشته شدن</div><div class="fb"><span class="bi"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>پلی پروپیلن تقویتی</div><div class="fb"><span class="bi"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span>طراحی ارگونومیک</div></div></div>
-        <div class="cs2"><div class="sl">رنگ‌بندی</div><div class="sg2"><div class="sc2"><img src="images/solara_white.jpg" alt=""><span class="sn2">سفید</span></div><div class="sc2"><img src="images/solara_vanilla.jpg" alt=""><span class="sn2">وانیلی</span></div><div class="sc2"><img src="images/solara_black.jpg" alt=""><span class="sn2">مشکی</span></div><div class="sc2"><img src="images/solara_gray.jpg" alt=""><span class="sn2">طوسی</span></div></div></div>
-    </div>
-</div>
+            <div class="specs-grid">
+                <div class="spec-item"><span class="label">طول</span><span class="value">۵۷.۵ سانتی‌متر</span></div>
+                <div class="spec-item"><span class="label">عرض</span><span class="value">۵۵.۳ سانتی‌متر</span></div>
+                <div class="spec-item"><span class="label">ارتفاع</span><span class="value">۱۰۱ سانتی‌متر</span></div>
+                <div class="spec-item"><span class="label">ارتفاع پشتی</span><span class="value">۸۰ سانتی‌متر</span></div>
+                <div class="spec-item"><span class="label">وزن صندلی</span><span class="value">۲.۴ کیلوگرم</span></div>
+                <div class="spec-item"><span class="label">تعداد در بسته</span><span class="value">۶ عدد</span></div>
+                <div class="spec-item spec-full"><span class="label">قابلیت انباشته شدن روی هم</span><span class="value">دارد</span></div>
+            </div>
 
-<div class="page pl">
-    <img src="images/logo.png" class="pl2" alt="poolad"><div class="sp"><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div></div><div class="grid"></div><div class="edge r"></div>
-    <div class="pc"><div class="iw">
-        <img src="images/jasmine_main.jpg" alt="jasmine">
-        <div class="il"><div class="in"><span>جاسمین مستطیل</span><span class="it">میز</span></div>
-        میز پلیمری جاسمین با طراحی شیک و مدرن، انتخابی ایده‌آل برای جمع‌های خانوادگی و دوستانه است. این میز ۶ نفره با سطح مات، جلوه‌ای مشابه چوب را به فضا می‌بخشد. قابلیت مونتاژ و دمونتاژ پایه‌ها، حمل و نقل آن را آسان کرده است.
-        </div>
-    </div></div>
-</div>
-
-<div class="page pr">
-    <img src="images/logo.png" class="pl2 l" alt="poolad"><div class="sp"><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div></div><div class="grid"></div><div class="edge l"></div>
-    <div class="pc">
-        <div class="sl">مشخصات فنی</div>
-        <h2 class="pt2">جاسمین مستطیل</h2>
-        <table class="st2"><tr><td class="sll">طول</td><td class="svl">۶۰.۷ cm</td></tr><tr><td class="sll">عرض</td><td class="svl">۵۸.۵ cm</td></tr><tr><td class="sll">ارتفاع</td><td class="svl">۸۰ cm</td></tr><tr><td class="sll">وزن</td><td class="svl">۱۰.۵ kg</td></tr><tr><td class="sll">تعداد در بسته</td><td class="svl">۶ عدد</td></tr></table>
-        <div class="ft"><div class="sl">ویژگی‌ها</div><div class="bg2"><div class="fb"><span class="bi"><svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></span>مقاوم UV</div><div class="fb"><span class="bi"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>سطح مات چوب‌نما</div><div class="fb"><span class="bi"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.27 6.96 12 12.01l8.73-5.05M12 22.08V12"/></svg></span>جاچتری مرکزی</div><div class="fb"><span class="bi"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>قابل مونتاژ</div></div></div>
-        <div class="cs2"><div class="sl">رنگ‌بندی</div><div class="sg2"><div class="sc2"><img src="images/jasmine_white.jpg" alt=""><span class="sn2">سفید</span></div><div class="sc2"><img src="images/jasmine_vanilla.jpg" alt=""><span class="sn2">وانیلی</span></div><div class="sc2"><img src="images/jasmine_green.jpg" alt=""><span class="sn2">سبز</span></div><div class="sc2"><img src="images/jasmine_black.jpg" alt=""><span class="sn2">مشکی</span></div></div></div>
-    </div>
-</div>
-
-<div class="page ab">
-    <img src="images/logo.png" class="pl2" alt="poolad"><div class="sp"><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div></div><div class="dots"></div><div class="edge r"></div>
-    <div class="pc">
-        <div class="abt">درباره پولاد صنعت</div><div class="abd"></div>
-        <div class="abv"><div class="abs2"><div class="n2">۱۳۹۹</div><div class="l2">سال تاسیس</div></div></div>
-        <p class="abp">کارخانه پولاد صنعت در سال ۱۳۹۹ تاسیس شد و با هدف تولید محصولات پلیمری صنعتی و خانگی با ابعاد بزرگ آغاز به کار کرد. در گام اول، این واحد با تمرکز بر طراحی و تولید مبلمان پلیمری فضای باز، به یکی از بازیگران مهم در این بازار تبدیل گردید.</p>
-        <div class="abf">
-            <div class="abfi"><div class="ai2"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><div class="at2"><strong>تکنولوژی روز دنیا</strong><br>بهره‌گیری از پیشرفته‌ترین تکنولوژی‌ها در تولید</div></div>
-            <div class="abfi"><div class="ai2"><svg viewBox="0 0 24 24"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg></div><div class="at2"><strong>تیم طراحی خلاق</strong><br>طراحی‌های مدرن، جذاب و ارگونومیک</div></div>
-            <div class="abfi"><div class="ai2"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div><div class="at2"><strong>کیفیت بی‌نظیر</strong><br>محصولاتی با دوام بالا و کیفیت تضمین‌شده</div></div>
+            <div class="features-row">
+                <span class="feature-badge"><span class="dot"></span>مقاوم UV</span>
+                <span class="feature-badge"><span class="dot"></span>قابل انباشته شدن</span>
+                <span class="feature-badge"><span class="dot"></span>پلی پروپیلن تقویت شده</span>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="page ct3">
-    <img src="images/logo.png" class="pl2 l" alt="poolad"><div class="sp"><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div></div><div class="dots"></div><div class="edge l"></div>
-    <div class="pc">
-        <div class="ctt">تماس با ما</div><div class="ctd"></div>
-        <div class="ctc">
-            <div class="ctct"><svg viewBox="0 0 24 24"><path d="M3 21h18M3 7v14M21 7v14M6 11h4M6 15h4M14 11h4M14 15h4M9 21V3h6l6 4v14"/></svg>دفتر مرکزی</div>
-            <div class="cti"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>تهران، تهرانپارس، خیابان جشنواره، خیابان رضا میوه، خیابان صبوری، پلاک یک</span></div>
-            <div class="cti"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><span>۳۳۳۷ ۷۷۳۳ - ۰۲۱ / داخلی ۱۲۷</span></div>
-            <div class="cti"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v3"/></svg><span>۷۵۳۷ ۷۷۳۲ - ۰۲۱</span></div>
-            <div class="cti"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>کد پستی: ۱۶۵۸۶ - ۱۴۵۱۱</span></div>
+    <div class="colors-section">
+        <div class="colors-label">رنگ‌بندی موجود:</div>
+        <div class="colors-row">
+            <div class="color-swatch"><img src="images/solara_white.jpg" alt="سفید"><span class="color-name">سفید</span></div>
+            <div class="color-swatch"><img src="images/solara_vanilla.jpg" alt="وانیلی"><span class="color-name">وانیلی</span></div>
+            <div class="color-swatch"><img src="images/solara_black.jpg" alt="مشکی"><span class="color-name">مشکی</span></div>
+            <div class="color-swatch"><img src="images/solara_gray.jpg" alt="طوسی"><span class="color-name">طوسی</span></div>
         </div>
-        <div class="ctc">
-            <div class="ctct"><svg viewBox="0 0 24 24"><path d="M3 21h18M3 7v14M21 7v14M6 11h4M6 15h4M14 11h4M14 15h4M9 21V3h6l6 4v14"/></svg>کارخانه</div>
-            <div class="cti"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>شهرک صنعتی پرند، میدان فناوری، خیابان فناوری شمالی، پلاک ب-۲۹</span></div>
-            <div class="cti"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><span>۳۳۳۷ ۷۷۳۳ - ۰۲۱ / داخلی ۱۲۷</span></div>
+    </div>
+
+    <div class="page-num">۱</div>
+</div>
+
+<!-- ==================== PRODUCT 2: JASMINE TABLE ==================== -->
+<div class="product-page">
+    <div class="grid-lines"></div>
+    <div class="logo-bar"><img src="images/logo.png" alt="پولاد صنعت"></div>
+    <div class="spiral-deco">
+        <div class="spiral-dot"></div><div class="spiral-dot"></div><div class="spiral-dot"></div>
+        <div class="spiral-dot"></div><div class="spiral-dot"></div><div class="spiral-dot"></div>
+        <div class="spiral-dot"></div><div class="spiral-dot"></div><div class="spiral-dot"></div>
+        <div class="spiral-dot"></div><div class="spiral-dot"></div><div class="spiral-dot"></div>
+        <div class="spiral-dot"></div><div class="spiral-dot"></div><div class="spiral-dot"></div>
+    </div>
+
+    <div class="product-header">
+        <span class="product-tag">میز</span>
+        <h2 class="product-name">جاسمین مستطیل</h2>
+    </div>
+    <div class="green-line"></div>
+
+    <div class="product-layout">
+        <div class="product-image-main">
+            <img src="images/jasmine_main.jpg" alt="میز جاسمین مستطیل">
         </div>
-        <a href="https://pooladsanat.com" target="_blank" class="ctb">pooladsanat.com</a>
+        <div class="product-info">
+            <p class="product-desc">
+                میز پلیمری جاسمین با طراحی شیک و مدرن، انتخابی ایده‌آل برای جمع‌های خانوادگی و دوستانه است. این میز ۶ نفره با استفاده از پلی پروپیلن تقویت شده ساخته شده و سطح مات آن جلوه‌ای مشابه چوب را به فضا می‌بخشد. قابلیت مونتاژ و دمونتاژ پایه‌ها، حمل و نقل آن را آسان کرده است. همچنین جاچتری در مرکز صفحه امکان نصب سایه‌بان را فراهم می‌کند.
+            </p>
+
+            <div class="specs-grid">
+                <div class="spec-item"><span class="label">طول</span><span class="value">۶۰.۷ سانتی‌متر</span></div>
+                <div class="spec-item"><span class="label">عرض</span><span class="value">۵۸.۵ سانتی‌متر</span></div>
+                <div class="spec-item"><span class="label">ارتفاع</span><span class="value">۸۰ سانتی‌متر</span></div>
+                <div class="spec-item"><span class="label">وزن میز</span><span class="value">۱۰.۵ کیلوگرم</span></div>
+                <div class="spec-item spec-full"><span class="label">تعداد در بسته</span><span class="value">۶ عدد</span></div>
+                <div class="spec-item spec-full"><span class="label">مقاوم در برابر اشعه UV</span><span class="value">دارد</span></div>
+            </div>
+
+            <div class="features-row">
+                <span class="feature-badge"><span class="dot"></span>مقاوم UV</span>
+                <span class="feature-badge"><span class="dot"></span>سطح مات چوب‌نما</span>
+                <span class="feature-badge"><span class="dot"></span>جاچتری مرکزی</span>
+                <span class="feature-badge"><span class="dot"></span>قابل مونتاژ</span>
+            </div>
+        </div>
     </div>
-</div>
 
-<div class="page bc2" data-density="hard">
-    <div class="sp"><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div><div class="sh"></div></div><div class="dots"></div>
-    <div class="pc">
-        <img src="images/logo.png" class="bcl" alt="poolad">
-        <div class="bcln"></div>
-        <div class="bctx">پولاد صنعت<br>نوآوری در مبلمان فضای باز</div>
-        <div class="bcln"></div>
+    <div class="colors-section">
+        <div class="colors-label">رنگ‌بندی موجود:</div>
+        <div class="colors-row">
+            <div class="color-swatch"><img src="images/jasmine_white.jpg" alt="سفید"><span class="color-name">سفید</span></div>
+            <div class="color-swatch"><img src="images/jasmine_vanilla.jpg" alt="وانیلی"><span class="color-name">وانیلی</span></div>
+            <div class="color-swatch"><img src="images/jasmine_green.jpg" alt="سبز"><span class="color-name">سبز</span></div>
+            <div class="color-swatch"><img src="images/jasmine_black.jpg" alt="مشکی"><span class="color-name">مشکی</span></div>
+        </div>
     </div>
+
+    <div class="page-num">۲</div>
 </div>
 
-</div></div>
+<!-- ==================== CONTACT PAGE ==================== -->
+<div class="contact-page">
+    <div class="grid-lines"></div>
+    <div class="logo-bar"><img src="images/logo.png" alt="پولاد صنعت"></div>
+    <div class="spiral-deco">
+        <div class="spiral-dot"></div><div class="spiral-dot"></div><div class="spiral-dot"></div>
+        <div class="spiral-dot"></div><div class="spiral-dot"></div><div class="spiral-dot"></div>
+        <div class="spiral-dot"></div><div class="spiral-dot"></div><div class="spiral-dot"></div>
+        <div class="spiral-dot"></div><div class="spiral-dot"></div><div class="spiral-dot"></div>
+        <div class="spiral-dot"></div><div class="spiral-dot"></div><div class="spiral-dot"></div>
+    </div>
 
-<div class="ctrls">
-    <button class="btn2" id="prevBtn"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
-    <span class="pi2" id="pageInfo">۱ / ۸</span>
-    <button class="btn2" id="nextBtn"><svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg></button>
+    <div style="position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column;">
+        <h2 class="contact-title">درباره پولاد صنعت</h2>
+        <div class="contact-divider"></div>
+
+        <p class="about-text">
+            کارخانه پولاد صنعت در سال ۱۳۹۹ تاسیس شد و با هدف تولید محصولات پلیمری صنعتی و خانگی با ابعاد بزرگ آغاز به کار کرد. در گام اول، این واحد با تمرکز بر طراحی و تولید مبلمان پلیمری فضای باز، به یکی از بازیگران مهم در این بازار تبدیل گردید. با بهره‌گیری از تکنولوژی‌های روز دنیا و تیم طراحی خلاق، پولاد صنعت محصولاتی تولید می‌کند که نه تنها از نظر کیفیت بی‌نظیر هستند، بلکه دارای طراحی‌های مدرن و جذاب نیز بوده و اصول ارگونومی را رعایت می‌کنند.
+        </p>
+
+        <div class="contact-grid">
+            <div class="contact-card">
+                <div class="contact-card-title">دفتر مرکزی</div>
+                <div class="contact-item">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    </div>
+                    <span>تهران، تهرانپارس، خیابان جشنواره، خیابان رضا میوه، خیابان صبوری، پلاک یک</span>
+                </div>
+                <div class="contact-item">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    </div>
+                    <span>۳۳۳۷ ۷۷۳۳ - ۰۲۱ / داخلی ۱۲۷</span>
+                </div>
+                <div class="contact-item">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24"><path d="M2 20h20v-4H2v4zm2-3h2v2H4v-2zM2 4v4h20V4H2zm4 3H4V5h2v2zm-4 7h20v-4H2v4zm2-3h2v2H4v-2z"/></svg>
+                    </div>
+                    <span>۷۵۳۷ ۷۷۳۲ - ۰۲۱</span>
+                </div>
+                <div class="contact-item">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    </div>
+                    <span>۱۶۵۸۶ - ۱۴۵۱۱</span>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-card-title">کارخانه</div>
+                <div class="contact-item">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    </div>
+                    <span>آزادراه تهران-ساوه، شهرک صنعتی پرند، میدان فناوری، خیابان فناوری شمالی، خیابان بوستان شرقی، جنب شرکت ایران ترانسفو، پلاک ب-۲۹</span>
+                </div>
+                <div class="contact-item">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    </div>
+                    <span>۳۳۳۷ ۷۷۳۳ - ۰۲۱ / داخلی ۱۲۷</span>
+                </div>
+                <div class="contact-item">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24"><path d="M2 20h20v-4H2v4zm2-3h2v2H4v-2zM2 4v4h20V4H2zm4 3H4V5h2v2zm-4 7h20v-4H2v4zm2-3h2v2H4v-2z"/></svg>
+                    </div>
+                    <span>۷۵۳۷ ۷۷۳۲ - ۰۲۱</span>
+                </div>
+                <div class="contact-item">
+                    <div class="icon">
+                        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    </div>
+                    <span>۱۶۵۸۶ - ۱۴۵۱۱</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-footer">
+            <a href="https://pooladsanat.com" class="website-link">pooladsanat.com</a>
+        </div>
+    </div>
+
+    <div class="page-num">۳</div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js"></script>
-<script>
-const pages=document.querySelectorAll('.page');
-const total=pages.length;
-const flip=new St.PageFlip(document.getElementById('book'),{
-    width:480,height:640,size:'stretch',
-    minWidth:280,maxWidth:560,minHeight:380,maxHeight:750,
-    showCover:true,maxShadowOpacity:0.4,flippingTime:800,
-    usePortrait:true,startZIndex:0,autoSize:true,
-    drawShadow:true,mobileScrollSupport:true
-});
-flip.loadFromHTML(pages);
-flip.on('flip',e=>{
-    document.getElementById('pageInfo').textContent=toP(e.data+1)+' / '+toP(total);
-    document.getElementById('prevBtn').disabled=(e.data===0);
-    document.getElementById('nextBtn').disabled=(e.data===total-1);
-});
-document.getElementById('prevBtn').disabled=true;
-document.getElementById('prevBtn').addEventListener('click',()=>flip.flipPrev());
-document.getElementById('nextBtn').addEventListener('click',()=>flip.flipNext());
-function toP(n){return String(n).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d])}
-</script>
-</body></html>
+</body>
+</html>
